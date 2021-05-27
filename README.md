@@ -28,7 +28,8 @@
 - 變數名稱會區分大小寫。
 ### 宣告
   - 字串變數 : `string 變數名 = "任意字串";` ps.變數名是可以使用中文的  
-  - 布林值 : `bool 變數名 = 布林值;`  
+  - 布林值 : `bool 變數名 = 布林值;`
+  - 字元 : `char userOption = '';` 使用Unicode字元，用`單引號`  
   - 透過+符號連結前後 
   ex. 
     ```
@@ -42,6 +43,19 @@
     string aFriend = "   Tyson   ";
     Console.WriteLine($"Hello {aFriend} 567"); //輸出 Hello Tyson
     ```
+### 陣列宣告
+  - 可保存相同資料類型的多個值，必須同時指定`資料類型`和`陣列大小`。  
+    ```
+    string[] fraudulentOrderIDs = new string[3];
+    ```
+  - 將值指派至陣列的元素
+    ```
+    fraudulentOrderIDs[0] = "A123";
+    fraudulentOrderIDs[1] = "B456";
+    fraudulentOrderIDs[2] = "C789";
+    ```
+
+
 ### 方法
   - 變數後可接屬性或方法 :  
     ```
@@ -157,6 +171,14 @@ double只能與同為double和int類型運算
     {
       Console.WriteLine($"The cell is ({row}, {column})");
     }
+  }
+  ```
+- foreach陣列迴圈 寫法
+  ```
+  string[] names = { "Bob", "Conrad", "Grant" };
+  foreach (string name in names)
+  {
+      Console.WriteLine(name);
   }
   ```
 
@@ -298,3 +320,5 @@ double只能與同為double和int類型運算
   //Third: 3
   //Fourth: 4
   ```
+
+- `Void 方法` : 此方法不會傳回值
